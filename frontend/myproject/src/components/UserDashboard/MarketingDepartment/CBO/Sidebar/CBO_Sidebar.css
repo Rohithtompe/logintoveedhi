@@ -1,0 +1,436 @@
+/* HR Manager Sidebar Styles - Yellow/Gold Theme */
+.hr-sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+  color: #78350f;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 5px 0 25px rgba(245, 158, 11, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba(120, 53, 15, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Sidebar Header */
+.hr-sidebar-header {
+  padding: 25px 20px;
+  border-bottom: 1px solid rgba(120, 53, 15, 0.1);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.1) 100%);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hr-sidebar-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.hr-sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.hr-logo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 
+    0 8px 25px rgba(245, 158, 11, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.hr-logo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hr-logo-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  text-align: center;
+}
+
+.hr-logo-subtitle {
+  font-size: 0.8rem;
+  color: #92400e;
+  font-weight: 600;
+  margin-top: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Sidebar Menu */
+.hr-sidebar-menu {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+  min-height: 0;
+  background: rgba(254, 243, 199, 0.9);
+}
+
+/* Custom Scrollbar */
+.hr-sidebar-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hr-sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(245, 241, 11, 0.1);
+  border-radius: 3px;
+}
+
+.hr-sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 3px;
+}
+
+.hr-sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+/* Menu Sections */
+.hr-menu-section {
+  margin-bottom: 5px;
+  padding: 0 15px;
+}
+
+/* Main Menu Items */
+.hr-menu-item {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+  border-radius: 12px;
+  margin: 4px 0;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.hr-menu-item:hover {
+  background: rgba(251, 191, 36, 0.2);
+  border-color: rgba(251, 191, 36, 0.3);
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15);
+}
+
+.hr-menu-item.hr-active {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%);
+  border-left: 4px solid #f59e0b;
+  box-shadow: 
+    0 6px 25px rgba(245, 158, 11, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.hr-menu-item.hr-active::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+  animation: hr-pulse 2s infinite;
+}
+
+@keyframes hr-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.8);
+  }
+}
+
+/* Menu Icons */
+.hr-menu-icon {
+  font-size: 1.1rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #92400e;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.hr-menu-item:hover .hr-menu-icon {
+  background: rgba(251, 191, 36, 0.3);
+  color: #78350f;
+  transform: scale(1.08);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.hr-menu-item.hr-active .hr-menu-icon {
+  background: rgba(245, 158, 11, 0.4);
+  color: #78350f;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  border-color: rgba(245, 158, 11, 0.6);
+}
+
+/* Menu Text */
+.hr-menu-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #78350f;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.hr-menu-item:hover .hr-menu-text {
+  color: #451a03;
+}
+
+.hr-menu-item.hr-active .hr-menu-text {
+  color: #451a03;
+  font-weight: 700;
+}
+
+/* Menu Arrow */
+.hr-menu-arrow {
+  font-size: 0.9rem;
+  color: rgba(120, 53, 15, 0.5);
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.hr-menu-item:hover .hr-menu-arrow {
+  color: #78350f;
+}
+
+/* Submenu Styles */
+.hr-submenu {
+  background: rgba(251, 191, 36, 0.1);
+  border-left: 3px solid rgba(245, 158, 11, 0.3);
+  margin-left: 20px;
+  padding: 10px 0;
+  border-radius: 0 0 12px 12px;
+  animation: hr-slideDown 0.3s ease-out;
+  border-top: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+@keyframes hr-slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submenu Items */
+.hr-submenu-item {
+  padding: 12px 20px 12px 55px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  margin: 4px 10px;
+}
+
+.hr-submenu-item:hover {
+  background: rgba(251, 191, 36, 0.2);
+  padding-left: 57px;
+  transform: translateX(5px);
+}
+
+.hr-submenu-item.hr-active {
+  background: rgba(245, 158, 11, 0.25);
+  color: #92400e;
+}
+
+.hr-submenu-item.hr-active::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+/* Submenu Icons */
+.hr-submenu-icon {
+  font-size: 0.95rem;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #92400e;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.hr-submenu-item:hover .hr-submenu-icon {
+  color: #78350f;
+  transform: scale(1.05);
+  background: rgba(251, 191, 36, 0.3);
+}
+
+.hr-submenu-item.hr-active .hr-submenu-icon {
+  color: #78350f;
+  background: rgba(245, 158, 11, 0.4);
+}
+
+/* Submenu Text */
+.hr-submenu-text {
+  color: #78350f;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.hr-submenu-item:hover .hr-submenu-text {
+  color: #451a03;
+  font-weight: 600;
+}
+
+.hr-submenu-item.hr-active .hr-submenu-text {
+  color: #451a03;
+  font-weight: 600;
+}
+
+/* Sidebar Footer */
+.hr-sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(120, 53, 15, 0.1);
+  background: linear-gradient(180deg, rgba(254, 243, 199, 0.9) 0%, rgba(253, 230, 138, 0.95) 100%);
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Logout Item */
+.hr-logout-item {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.15) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hr-logout-item:hover {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(185, 28, 28, 0.25) 100%);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.2);
+}
+
+.hr-logout-item .hr-menu-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.hr-logout-item:hover .hr-menu-icon {
+  background: rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  transform: rotate(90deg);
+}
+
+.hr-logout-item .hr-menu-text {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.hr-logout-item:hover .hr-menu-text {
+  color: #991b1b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hr-sidebar {
+    width: 260px;
+  }
+  
+  .hr-sidebar-header {
+    height: 130px;
+    padding: 20px 15px;
+  }
+  
+  .hr-logo-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hr-sidebar {
+    width: 240px;
+    transform: translateX(-100%);
+  }
+  
+  .hr-sidebar.active {
+    transform: translateX(0);
+  }
+}

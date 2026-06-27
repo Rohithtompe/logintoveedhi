@@ -1,0 +1,143 @@
+/* Styles for State management */
+
+.state-page {
+  padding: 1.5rem;
+}
+
+.state-card,
+.list-card {
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6ebef;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #f7fbff 0%, #f3f7fb 100%);
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e9eef3;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #18314a;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.state-form .form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.state-form .form-label {
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4f7;
+  border: 1px solid #dbe6ef;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px 0 0 6px;
+  color: #007bff;
+}
+
+.form-control {
+  flex: 1;
+  border: 1px solid #dbe6ef;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+
+.form-actions {
+  margin-top: 0.75rem;
+}
+
+.form-actions .btn {
+  min-width: 120px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.state-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.state-table th,
+.state-table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid #eceff2;
+  vertical-align: middle;
+}
+
+.state-table thead th {
+  background: #2c3e50;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.badge {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color:black;
+}
+
+.badge.active {
+  background:green;
+}
+
+.badge.inactive {
+  background: #dc3545;
+}
+
+.actions .btn {
+  margin-right: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .state-form .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .state-form .form-label {
+    min-width: auto;
+  }
+
+  .input-wrap {
+    width: 100%;
+  }
+
+  .actions .btn {
+    margin-bottom: 0.5rem;
+  }
+}

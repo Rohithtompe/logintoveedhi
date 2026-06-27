@@ -1,0 +1,98 @@
+/* EmpDesignation styles */
+.master-page-container {
+    padding: 20px;
+}
+
+.master-header h2 {
+    margin: 0 0 10px;
+}
+
+.master-content {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.designation-form .form-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.designation-form .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.designation-form input,
+.designation-form select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.designation-list h3 {
+    margin-top: 8px;
+}
+
+.designation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.designation-table thead th {
+    text-align: left;
+    padding: 10px;
+    background: #f5f7fb;
+}
+
+.designation-table tbody td {
+    padding: 10px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.badge.active {
+    background: #0066cc;
+    color: #fff;
+}
+
+.badge.inactive {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn.small {
+    padding: 6px 10px;
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.btn.small.danger {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+@media (max-width:768px) {
+    .designation-form .form-row {
+        flex-direction: column;
+    }
+}

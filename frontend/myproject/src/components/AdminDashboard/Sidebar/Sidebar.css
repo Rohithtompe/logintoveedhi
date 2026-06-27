@@ -1,0 +1,391 @@
+/* AdminDashboard.css */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Header - Elegant Logo Design */
+.sidebar-header {
+  padding: 30px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elegant background pattern */
+.sidebar-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  z-index: 0;
+}
+
+/* Logo Container */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Logo Image - Modern Design */
+
+  
+.logo-container {
+  width: 240px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:white;
+  backdrop-filter:none;
+  backdrop-filter: none;
+  border-radius: 5px; /* Slightly increased border radius */
+  padding: 15px; /* Added some padding */
+  border: 1px solid rgba(59, 130, 246, 0.2); /* Added subtle border */
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(59, 130, 246, 0.1); /* Enhanced shadow */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+ 
+.logo-image {
+  width: 250px;          /* Fixed size for clarity */
+  height: 180px;         /* Same height & width = perfect circle */    /* Circle shape */
+  object-fit: contain;     /* Proper fitting without distortion */
+  display: block;
+  margin: 0 auto;        /* Center align */
+  background-color: #fff;
+  padding: 10px;          /* Space inside circle */  
+}
+
+
+
+/* Sidebar Menu with Glass Effect */
+.sidebar-menu {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+  min-height: 0;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Custom Scrollbar */
+.sidebar-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* Menu Sections */
+.menu-section {
+  margin-bottom: 5px;
+  padding: 0 15px;
+}
+
+/* Main Menu Items */
+.menu-item {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+  border-radius: 10px;
+  margin: 4px 0;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item.active {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(99, 102, 241, 0.15) 100%);
+  border-left: 4px solid #3b82f6;
+  box-shadow: 
+    0 4px 15px rgba(59, 130, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Menu Icons */
+.menu-icon {
+  font-size: 1.1rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item:hover .menu-icon {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.menu-item.active .menu-icon {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+/* Menu Text */
+.menu-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.3px;
+}
+
+.menu-item.active .menu-text {
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Arrow */
+.menu-arrow {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.menu-item:hover .menu-arrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Submenu Styles */
+.submenu {
+  background: rgba(0, 0, 0, 0.15);
+  border-left: 2px solid rgba(59, 130, 246, 0.2);
+  margin-left: 18px;
+  padding: 8px 0;
+  border-radius: 0 0 8px 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submenu Items */
+.submenu-item {
+  padding: 10px 20px 10px 45px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  margin: 2px 8px;
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 48px;
+  transform: translateX(3px);
+}
+
+.submenu-item.active {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.submenu-item.active::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Submenu Icons */
+.submenu-icon {
+  font-size: 0.95rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.submenu-item:hover .submenu-icon {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.submenu-item.active .submenu-icon {
+  color: #3b82f6;
+}
+
+/* Submenu Text */
+.submenu-text {
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+
+.submenu-item:hover .submenu-text {
+  color: white;
+}
+
+.submenu-item.active .submenu-text {
+  color: white;
+  font-weight: 500;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.9) 100%);
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Logout Item */
+.logout-item {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.1) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logout-item:hover {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(185, 28, 28, 0.25) 100%);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.15);
+}
+
+.logout-item .menu-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: white;
+}
+
+.logout-item:hover .menu-icon {
+  background: rgba(239, 68, 68, 0.3);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.logout-item .menu-text {
+  color: white
+}
+
+.logout-item:hover .menu-text {
+  color: white;
+}
+
+/* Sidebar Animation */
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+  
+  .sidebar-header {
+    height: 120px;
+  }
+  
+  .logo-container {
+    width: 160px;
+    height: 50px;
+  }
+}
+

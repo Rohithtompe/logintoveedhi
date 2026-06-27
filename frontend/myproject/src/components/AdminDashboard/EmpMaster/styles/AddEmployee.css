@@ -1,0 +1,141 @@
+/* Container for the entire form */
+.add-employee-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Heading style */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Form element styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row layout for fields */
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each input group */
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels styling */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Required field indicator */
+.required {
+  color: #d9534f; /* Bootstrap red color */
+  margin-left: 4px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* Input, select, textarea styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  padding: 10px 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: vertical;
+  background-color: #fafafa;
+}
+
+/* Hover effect */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="date"]:hover,
+select:hover,
+textarea:hover {
+  border-color: #80bdff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea specific */
+textarea {
+  min-height: 80px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/* Error message styling */
+.small.error {
+  color: #d9534f;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* Submit button styles */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-color: #0069d9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}

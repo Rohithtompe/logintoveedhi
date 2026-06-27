@@ -1,0 +1,337 @@
+/* Profile Image Styles - Display Only */
+.emp-profile-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.emp-profile-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.emp-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emp-profile-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.emp-profile-placeholder i {
+    font-size: 4rem;
+}
+
+.emp-profile-image-loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .emp-profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .emp-profile-placeholder i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .emp-profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .emp-profile-placeholder i {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+/* Attachments - Exact copy from image with proper button styling */
+.emp-attachments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.emp-attachment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf2f7;
+    width: 100%;
+}
+
+.emp-attachment-row:last-child {
+    border-bottom: none;
+}
+
+.emp-attachment-name {
+    font-weight: 600;
+    color: #1a2639;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.emp-attachment-view {
+    background: transparent;
+    border: 1px solid #d0d5dd;
+    color: #344054;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.emp-attachment-view:hover {
+    background-color: #f9fafb;
+    border-color: #98a2b3;
+    color: #1d2939;
+}
+
+.emp-attachment-view i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+.emp-attachment-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.emp-attachment-delete {
+    background: transparent;
+    border: 1px solid #fee2e2;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.emp-attachment-delete:hover {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+.emp-attachment-delete i {
+    font-size: 14px;
+    margin-right: 0;
+}
+
+.emp-tab-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #eaecf0;
+    padding-bottom: 12px;
+}
+
+.emp-tab-title i {
+    color: #667085;
+    font-size: 20px;
+}
+
+.emp-add-attachment-btn {
+    background: white;
+    border: 1px solid #d0d5dd;
+    color: #344054;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.emp-add-attachment-btn:hover {
+    background: #f9fafb;
+    border-color: #98a2b3;
+}
+
+.emp-add-attachment-btn i {
+    font-size: 16px;
+    color: #667085;
+}
+
+.emp-no-attachments {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px dashed #eaecf0;
+}
+
+.emp-no-attachments p {
+    color: #667085;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.emp-no-attachments .emp-add-attachment-btn {
+    margin-left: 0;
+}
+
+/* Success/Error Messages */
+.emp-success-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.emp-success-message i {
+    color: #12b76a;
+    font-size: 20px;
+}
+
+.emp-success-message strong {
+    color: #067647;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.emp-success-message p {
+    color: #067647;
+    margin: 0;
+    font-size: 14px;
+}
+
+.emp-error-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: #fef3f2;
+    border: 1px solid #fecdca;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.emp-error-message i {
+    color: #f04438;
+    font-size: 20px;
+}
+
+.emp-error-message strong {
+    color: #b42318;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.emp-error-message p {
+    color: #b42318;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Loading State */
+.emp-attachments-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.emp-attachments-loading .spinner-border {
+    width: 40px;
+    height: 40px;
+    color: #3b82f6 !important;
+    margin-bottom: 16px;
+}
+
+.emp-attachments-loading p {
+    color: #667085;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .emp-attachment-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .emp-attachment-view {
+        width: 100%;
+    }
+    
+    .emp-attachment-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .emp-add-attachment-btn {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

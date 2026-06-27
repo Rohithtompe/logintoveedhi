@@ -1,0 +1,183 @@
+/* Training.css */
+
+/* Main Container */
+.training-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header */
+.training-header {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Grid Layout */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.training-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e1e5eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    border-color: #3498db;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1;
+    text-align: center;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+/* Add Button */
+.btn-add {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+    min-height: 45px;
+}
+
+.btn-add:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+.btn-add:active {
+    background-color: #21618c;
+    transform: scale(0.98);
+}
+
+/* List Button */
+.btn-list {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+    min-height: 45px;
+}
+
+.btn-list:hover {
+    background-color: #27ae60;
+    transform: scale(1.02);
+}
+
+.btn-list:active {
+    background-color: #1e8449;
+    transform: scale(0.98);
+}
+
+/* Single Button (when no List button) */
+.button-group .btn-add:only-child {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .training-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .training-container {
+        padding: 20px;
+    }
+    
+    .training-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .training-header {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .training-card {
+        padding: 20px;
+    }
+    
+    .btn-add,
+    .btn-list {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .training-header {
+        font-size: 24px;
+    }
+    
+    .training-container {
+        padding: 15px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn-add,
+    .btn-list {
+        width: 100%;
+    }
+}
